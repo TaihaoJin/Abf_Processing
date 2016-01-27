@@ -1,0 +1,167 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Abf_Processing - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Taihao\LOCALS~1\Temp\RSP23.tmp" with contents
+[
+/nologo /MTd /W4 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/Abf_Processing.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\Microsoft Visual Studio\MyProjects\Abf_Processing\FileNameHandling.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Taihao\LOCALS~1\Temp\RSP23.tmp" 
+Creating temporary file "C:\DOCUME~1\Taihao\LOCALS~1\Temp\RSP27.tmp" with contents
+[
+NRStatic.lib /nologo /subsystem:windows /profile /debug /machine:I386 /nodefaultlib:"libc.lib" /nodefaultlib:"libcmt.lib" /nodefaultlib:"msvcrt.lib" /nodefaultlib:"libcd.lib" /nodefaultlib:"msvcrtd.lib" /out:"Debug/Abf_Processing.exe" /TJCommonUtil.lib 
+".\Debug\Abf.obj"
+".\Debug\Abf_Processing.obj"
+".\Debug\Abf_ProcessingDoc.obj"
+".\Debug\Abf_ProcessingView.obj"
+".\Debug\AbfHeaderToWrite.obj"
+".\Debug\AbfTraceIdealization.obj"
+".\Debug\AllPointHistgram.obj"
+".\Debug\AllPointHistgramDialog.obj"
+".\Debug\ArtifactHanddlingOptionDlg.obj"
+".\Debug\ArtifactSegmentDialog.obj"
+".\Debug\ArtifactsHandling.obj"
+".\Debug\ArtifactsRemoving.obj"
+".\Debug\BallRolling.obj"
+".\Debug\BallRollingOption.obj"
+".\Debug\BaselineProcessing.obj"
+".\Debug\BlineAdjustOptionDialog.obj"
+".\Debug\BurstDelimiter.obj"
+".\Debug\BurstDelimiterCalculationDialog.obj"
+".\Debug\BurstHandling.obj"
+".\Debug\BurstingTimeCourseOptionDlg.obj"
+".\Debug\BurstOptionDialog.obj"
+".\Debug\ChildFrm.obj"
+".\Debug\CommonFunctions.obj"
+".\Debug\DataSimulations.obj"
+".\Debug\Evl.obj"
+".\Debug\Evl2DHistogram.obj"
+".\Debug\EvlComment.obj"
+".\Debug\EvlCorrection.obj"
+".\Debug\EvlDwellingTimeFitting.obj"
+".\Debug\EvlHistogramDlg.obj"
+".\Debug\EvlSummary.obj"
+".\Debug\EvlTimeCourse.obj"
+".\Debug\EvlTimeCourse0.obj"
+".\Debug\EvlTimeCourseDialog.obj"
+".\Debug\ExponentialFitting.obj"
+".\Debug\FileNameHandling.obj"
+".\Debug\FittedEvlParamterHandling.obj"
+".\Debug\FittingSummary.obj"
+".\Debug\GammaFitting.obj"
+".\Debug\GaussianFitting.obj"
+".\Debug\GeometricFitting.obj"
+".\Debug\GettingFittedParametersDlg.obj"
+".\Debug\History.obj"
+".\Debug\HouseValues.obj"
+".\Debug\IgnoreShortClosingDialog.obj"
+".\Debug\IgnoreSmallTransitionOptionDialog.obj"
+".\Debug\IncidenceSubsetHandler.obj"
+".\Debug\IndexOrganizerHist.obj"
+".\Debug\IndexSetHandler.obj"
+".\Debug\LinearHistogramDouble.obj"
+".\Debug\LinearHistogramHandler.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MeanSem.obj"
+".\Debug\MortgageComputer.obj"
+".\Debug\NumeircalRecipes.obj"
+".\Debug\OneDHistogram.obj"
+".\Debug\QMatrixFitting.obj"
+".\Debug\ScriptManager.obj"
+".\Debug\SegDeletOptionDialog.obj"
+".\Debug\SegmentExtractionDialog2.obj"
+".\Debug\SmoothingOptionDialog.obj"
+".\Debug\StdAfx.obj"
+".\Debug\SubconductanceDlg.obj"
+".\Debug\Abf_Processing.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Taihao\LOCALS~1\Temp\RSP27.tmp"
+<h3>Output Window</h3>
+Compiling...
+FileNameHandling.cpp
+C:\Program Files\Microsoft Visual Studio\MyProjects\Abf_Processing\FileNameHandling.cpp(63) : warning C4189: 'nLength' : local variable is initialized but not referenced
+C:\Program Files\Microsoft Visual Studio\MyProjects\Abf_Processing\FileNameHandling.cpp(103) : warning C4244: '=' : conversion from 'int' to 'char', possible loss of data
+Linking...
+LINK : warning LNK4044: unrecognized option "TJCommonUtil.lib"; ignored
+Creating temporary file "C:\DOCUME~1\Taihao\LOCALS~1\Temp\RSP29.tmp" with contents
+[
+/nologo /o"Debug/Abf_Processing.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\Abf.sbr"
+".\Debug\Abf_Processing.sbr"
+".\Debug\Abf_ProcessingDoc.sbr"
+".\Debug\Abf_ProcessingView.sbr"
+".\Debug\AbfHeaderToWrite.sbr"
+".\Debug\AbfTraceIdealization.sbr"
+".\Debug\AllPointHistgram.sbr"
+".\Debug\AllPointHistgramDialog.sbr"
+".\Debug\ArtifactHanddlingOptionDlg.sbr"
+".\Debug\ArtifactSegmentDialog.sbr"
+".\Debug\ArtifactsHandling.sbr"
+".\Debug\ArtifactsRemoving.sbr"
+".\Debug\BallRolling.sbr"
+".\Debug\BallRollingOption.sbr"
+".\Debug\BaselineProcessing.sbr"
+".\Debug\BlineAdjustOptionDialog.sbr"
+".\Debug\BurstDelimiter.sbr"
+".\Debug\BurstDelimiterCalculationDialog.sbr"
+".\Debug\BurstHandling.sbr"
+".\Debug\BurstingTimeCourseOptionDlg.sbr"
+".\Debug\BurstOptionDialog.sbr"
+".\Debug\ChildFrm.sbr"
+".\Debug\CommonFunctions.sbr"
+".\Debug\DataSimulations.sbr"
+".\Debug\Evl.sbr"
+".\Debug\Evl2DHistogram.sbr"
+".\Debug\EvlComment.sbr"
+".\Debug\EvlCorrection.sbr"
+".\Debug\EvlDwellingTimeFitting.sbr"
+".\Debug\EvlHistogramDlg.sbr"
+".\Debug\EvlSummary.sbr"
+".\Debug\EvlTimeCourse.sbr"
+".\Debug\EvlTimeCourse0.sbr"
+".\Debug\EvlTimeCourseDialog.sbr"
+".\Debug\ExponentialFitting.sbr"
+".\Debug\FileNameHandling.sbr"
+".\Debug\FittedEvlParamterHandling.sbr"
+".\Debug\FittingSummary.sbr"
+".\Debug\GammaFitting.sbr"
+".\Debug\GaussianFitting.sbr"
+".\Debug\GeometricFitting.sbr"
+".\Debug\GettingFittedParametersDlg.sbr"
+".\Debug\History.sbr"
+".\Debug\HouseValues.sbr"
+".\Debug\IgnoreShortClosingDialog.sbr"
+".\Debug\IgnoreSmallTransitionOptionDialog.sbr"
+".\Debug\IncidenceSubsetHandler.sbr"
+".\Debug\IndexOrganizerHist.sbr"
+".\Debug\IndexSetHandler.sbr"
+".\Debug\LinearHistogramDouble.sbr"
+".\Debug\LinearHistogramHandler.sbr"
+".\Debug\MainFrm.sbr"
+".\Debug\MeanSem.sbr"
+".\Debug\MortgageComputer.sbr"
+".\Debug\NumeircalRecipes.sbr"
+".\Debug\OneDHistogram.sbr"
+".\Debug\QMatrixFitting.sbr"
+".\Debug\ScriptManager.sbr"
+".\Debug\SegDeletOptionDialog.sbr"
+".\Debug\SegmentExtractionDialog2.sbr"
+".\Debug\SmoothingOptionDialog.sbr"
+".\Debug\SubconductanceDlg.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\Taihao\LOCALS~1\Temp\RSP29.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Abf_Processing.exe - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

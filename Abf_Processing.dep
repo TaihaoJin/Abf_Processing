@@ -1,0 +1,235 @@
+# Microsoft Developer Studio Generated Dependency File, included by Abf_Processing.mak
+
+.\Abf.cpp : \
+	".\Abf.h"\
+	".\Abf_Processing.h"\
+	".\AllPointHistgram.h"\
+	".\AllPointHistgramDialog.h"\
+	".\ArtifactsHandling.h"\
+	".\BallRolling.h"\
+	".\BaselineProcessing.h"\
+	".\BlineAdjustOptionDialog.h"\
+	".\History.h"\
+	".\SegDeletOptionDialog.h"\
+	".\Structures.h"\
+	
+
+.\Abf_Processing.cpp : \
+	".\Abf.h"\
+	".\Abf_Processing.h"\
+	".\Abf_ProcessingDoc.h"\
+	".\Abf_ProcessingView.h"\
+	".\BaselineProcessing.h"\
+	".\BurstOptionDialog.h"\
+	".\ChildFrm.h"\
+	".\Evl.h"\
+	".\EvlSummary.h"\
+	".\History.h"\
+	".\IgnoreShortClosingDialog.h"\
+	".\MainFrm.h"\
+	".\Structures.h"\
+	
+
+.\Abf_Processing.rc : \
+	".\res\Abf_Processing.ico"\
+	".\res\Abf_Processing.rc2"\
+	".\res\Abf_ProcessingDoc.ico"\
+	".\res\bitmap1.bmp"\
+	".\res\Toolbar.bmp"\
+	
+
+.\Abf_ProcessingDoc.cpp : \
+	".\Abf.h"\
+	".\Abf_Processing.h"\
+	".\Abf_ProcessingDoc.h"\
+	".\BaselineProcessing.h"\
+	".\BurstOptionDialog.h"\
+	".\Evl.h"\
+	".\EvlSummary.h"\
+	".\EvlTimeCourseDialog.h"\
+	".\FittingSummary.h"\
+	".\History.h"\
+	".\IgnoreShortClosingDialog.h"\
+	".\IgnoreSmallTransitionOptionDialog.h"\
+	".\SegmentExtractionDialog2.h"\
+	".\Structures.h"\
+	
+
+.\Abf_ProcessingView.cpp : \
+	".\Abf.h"\
+	".\Abf_Processing.h"\
+	".\Abf_ProcessingDoc.h"\
+	".\Abf_ProcessingView.h"\
+	".\BaselineProcessing.h"\
+	".\BurstOptionDialog.h"\
+	".\Evl.h"\
+	".\EvlSummary.h"\
+	".\History.h"\
+	".\IgnoreShortClosingDialog.h"\
+	".\Structures.h"\
+	
+
+.\AbfHeaderToWrite.cpp : \
+	".\Abf_Processing.h"\
+	".\AbfHeaderToWrite.h"\
+	
+
+.\AllPointHistgram.cpp : \
+	".\Abf_Processing.h"\
+	".\AllPointHistgram.h"\
+	
+
+.\AllPointHistgramDialog.cpp : \
+	".\Abf_Processing.h"\
+	".\AllPointHistgramDialog.h"\
+	
+
+.\ArtifactHanddlingOptionDlg.cpp : \
+	".\Abf_Processing.h"\
+	".\ArtifactHanddlingOptionDlg.h"\
+	
+
+.\ArtifactSegmentDialog.cpp : \
+	".\Abf_Processing.h"\
+	".\ArtifactSegmentDialog.h"\
+	
+
+.\ArtifactsHandling.cpp : \
+	".\Abf_Processing.h"\
+	".\ArtifactHanddlingOptionDlg.h"\
+	".\ArtifactSegmentDialog.h"\
+	".\ArtifactsHandling.h"\
+	".\History.h"\
+	".\SegDeletOptionDialog.h"\
+	".\SmoothingOptionDialog.h"\
+	".\Structures.h"\
+	
+
+.\ArtifactsRemoving.cpp : \
+	".\Abf_Processing.h"\
+	".\ArtifactsRemoving.h"\
+	
+
+.\BallRolling.cpp : \
+	".\Abf.h"\
+	".\Abf_Processing.h"\
+	".\BallRolling.h"\
+	".\BallRollingOption.h"\
+	".\BaselineProcessing.h"\
+	".\History.h"\
+	".\SmoothingOptionDialog.h"\
+	".\Structures.h"\
+	
+
+.\BallRollingOption.cpp : \
+	".\Abf_Processing.h"\
+	".\BallRollingOption.h"\
+	
+
+.\BaselineProcessing.cpp : \
+	".\Abf_Processing.h"\
+	".\BaselineProcessing.h"\
+	
+
+.\BlineAdjustOptionDialog.cpp : \
+	".\Abf_Processing.h"\
+	".\BlineAdjustOptionDialog.h"\
+	
+
+.\BurstOptionDialog.cpp : \
+	".\Abf_Processing.h"\
+	".\BurstOptionDialog.h"\
+	
+
+.\ChildFrm.cpp : \
+	".\Abf_Processing.h"\
+	".\ChildFrm.h"\
+	
+
+.\CommonFunctions.cpp : \
+	".\Abf_Processing.h"\
+	".\CommonFunctions.h"\
+	
+
+.\Evl.cpp : \
+	".\Abf.h"\
+	".\Abf_Processing.h"\
+	".\BaselineProcessing.h"\
+	".\Evl.h"\
+	".\EvlSummary.h"\
+	".\EvlTimeCourse.h"\
+	".\History.h"\
+	".\Structures.h"\
+	
+
+.\EvlSummary.cpp : \
+	".\Abf_Processing.h"\
+	".\EvlSummary.h"\
+	
+
+.\EvlTimeCourse.cpp : \
+	".\Abf_Processing.h"\
+	".\EvlTimeCourse.h"\
+	
+
+.\EvlTimeCourseDialog.cpp : \
+	".\Abf_Processing.h"\
+	".\EvlTimeCourseDialog.h"\
+	
+
+.\FittingSummary.cpp : \
+	".\Abf_Processing.h"\
+	".\FittingSummary.h"\
+	".\Structures.h"\
+	
+
+.\History.cpp : \
+	".\Abf_Processing.h"\
+	".\History.h"\
+	
+
+.\IgnoreShortClosingDialog.cpp : \
+	".\Abf_Processing.h"\
+	".\IgnoreShortClosingDialog.h"\
+	
+
+.\IgnoreSmallTransitionOptionDialog.cpp : \
+	".\Abf_Processing.h"\
+	".\IgnoreSmallTransitionOptionDialog.h"\
+	
+
+.\MainFrm.cpp : \
+	".\Abf_Processing.h"\
+	".\MainFrm.h"\
+	
+
+.\NumeircalRecipes.cpp : \
+	"..\..\vc98\include\numerical recipes\nr.h"\
+	"..\..\vc98\include\numerical recipes\nrtypes.h"\
+	"..\..\vc98\include\numerical recipes\nrtypes_nr.h"\
+	"..\..\vc98\include\numerical recipes\nrutil.h"\
+	"..\..\vc98\include\numerical recipes\nrutil_nr.h"\
+	".\Abf_Processing.h"\
+	".\NumeircalRecipes.h"\
+	
+
+.\SegDeletOptionDialog.cpp : \
+	".\Abf_Processing.h"\
+	".\SegDeletOptionDialog.h"\
+	
+
+.\SegmentExtractionDialog2.cpp : \
+	".\Abf_Processing.h"\
+	".\SegmentExtractionDialog2.h"\
+	".\Structures.h"\
+	
+
+.\SmoothingOptionDialog.cpp : \
+	".\Abf_Processing.h"\
+	".\SmoothingOptionDialog.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\vc98\include\basetsd.h"\
+	".\StdAfx.h"\
+	

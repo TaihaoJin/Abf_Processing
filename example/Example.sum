@@ -1,0 +1,300 @@
+1. Analysis->Event list -> Mutiple Evl Summaries
+2. (prompt) Provide a file name for the output summary file (Name.Sum).
+3. (prompt) Specify the Evl files.
+4. (prompt) Provide the cutoff value (the burst delimiter).
+
+Below is one example of output file. 
+
+The first part of the file list the statistics of each individual data file.
+Line 1: The path and the name of the Evl file. 
+Line 2: Total record length, number of events (NumEvents), the largest level in the recording (nNumMaxLevel), 
+        and the number of channels (nNumChannels).
+Line 3: Open probability (Po), Mean open time (To), and (when the largest opening level is 1) the probability 
+        that the there was the second channel in the patch but did not display overlapped openings (1-Prob_Singel, 
+        the smaller the value the more likely that there was only one functional channel in the patch).
+Line 4, 5, ... For each level (level0 is the closed level), Mean dwell time (To, It is the mean closed-time for the level 0),
+        probability of the channel reside on that level (Po), the probability predicted by binomial distribution and the number of 
+        events of the level.
+For each evl file: the program first outputs the statistics of single-channel events, then outputs the same quantities for the bursts 
+	(after concatenating openings seperated by the closed events shorter than the cutoff value).
+
+
+The second part of the file list the statistics (Mean +- standard error (number of files)) of all evl files based on the mean value of 
+each individual evl file.
+Po: the open probability
+To: the mean open time
+TC: the mean closed time
+Amp: the mean amplitude
+TCib: the mean intraburst close-time
+BPo: the probability of bursting
+BPoib: the open probability within bursts
+BTo: the mean burst durations
+BTc: the mean interburst intervals
+fCutoff: the burst delimiter
+
+The third and fourth parts of the data file: Similar values were output in different format for plotting.
+
+	
+I think the second part is pretty much what you need to look at.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  0  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442200PB.EVL:
+Total Record Length (s): 255152.7969  NumEvents:       955  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0053,   To (ms):      2.8,  1-Prob_Sigle:  2.8159e-001
+Level0: To(ms):      531.0 Amp:  0.34 Po: 0.99470746  Po (bino): 0.99470747  NumEvents:      478
+Level1: To(ms):        2.8 Amp: -1.51 Po: 0.00529251  Po (bino): 0.00529251  NumEvents:      477
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442200PB.EVL:
+Total Record Length (s): 255152.7656  NumEvents:       307  nMaxLevel: 1
+Po:   0.0073,   To (ms):     12.2,  1-Prob_Sigle:  5.7069e-001
+Level0: To(ms):     1644.8 Amp:  0.34 Po: 0.99270792  Po (bino): 0.99270791  NumEvents:      154
+Level1: To(ms):       12.2 Amp: -1.57 Po: 0.00729210  Po (bino): 0.00729210  NumEvents:      153
+
+  1  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442202SC.EVL:
+Total Record Length (s): 1067354.1250  NumEvents:      2639  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0012,   To (ms):      1.0,  1-Prob_Sigle:  4.4446e-001
+Level0: To(ms):      807.6 Amp:  0.46 Po: 0.99877149  Po (bino): 0.99877155  NumEvents:     1320
+Level1: To(ms):        1.0 Amp: -2.39 Po: 0.00122846  Po (bino): 0.00122846  NumEvents:     1319
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442202SC.EVL:
+Total Record Length (s): 1067354.5000  NumEvents:      1179  nMaxLevel: 1
+Po:   0.0035,   To (ms):      6.3,  1-Prob_Sigle:  3.5566e-001
+Level0: To(ms):     1802.7 Amp:  0.46 Po: 0.99649882  Po (bino): 0.99649882  NumEvents:      590
+Level1: To(ms):        6.3 Amp: -1.83 Po: 0.00350117  Po (bino): 0.00350117  NumEvents:      589
+
+  2  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442203SB.EVL:
+Total Record Length (s): 1229951.8750  NumEvents:     52665  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0315,   To (ms):      1.5,  1-Prob_Sigle:  4.3440e-044
+Level0: To(ms):       45.2 Amp:  0.67 Po: 0.96845202  Po (bino): 0.96845198  NumEvents:    26333
+Level1: To(ms):        1.5 Amp: -2.22 Po: 0.03154803  Po (bino): 0.03154803  NumEvents:    26332
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442203SB.EVL:
+Total Record Length (s): 1229971.2500  NumEvents:      8293  nMaxLevel: 1
+Po:   0.0791,   To (ms):     23.5,  1-Prob_Sigle:  1.6816e-044
+Level0: To(ms):      273.1 Amp:  0.67 Po: 0.92094653  Po (bino): 0.92094648  NumEvents:     4147
+Level1: To(ms):       23.5 Amp: -1.87 Po: 0.07905351  Po (bino): 0.07905351  NumEvents:     4146
+
+  3  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442207a1.evl:
+Total Record Length (s): 359982.1875  NumEvents:      7733  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0217,   To (ms):      2.0,  1-Prob_Sigle:  2.8952e-019
+Level0: To(ms):       91.1 Amp:  0.04 Po: 0.97827722  Po (bino): 0.97827721  NumEvents:     3867
+Level1: To(ms):        2.0 Amp: -4.03 Po: 0.02172279  Po (bino): 0.02172279  NumEvents:     3866
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442207a1.evl:
+Total Record Length (s): 359983.3125  NumEvents:      1619  nMaxLevel: 1
+Po:   0.0402,   To (ms):     17.9,  1-Prob_Sigle:  5.1995e-008
+Level0: To(ms):      426.6 Amp:  0.05 Po: 0.95978815  Po (bino): 0.95978808  NumEvents:      810
+Level1: To(ms):       17.9 Amp: -3.52 Po: 0.04021189  Po (bino): 0.04021189  NumEvents:      809
+
+  4  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442209SC.EVL:
+Total Record Length (s): 1070166.3750  NumEvents:      5745  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0066,   To (ms):      2.5,  1-Prob_Sigle:  7.2424e-005
+Level0: To(ms):      370.0 Amp:  0.98 Po: 0.99339425  Po (bino): 0.99339426  NumEvents:     2873
+Level1: To(ms):        2.5 Amp: -2.61 Po: 0.00660573  Po (bino): 0.00660573  NumEvents:     2872
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442209SC.EVL:
+Total Record Length (s): 1070169.0000  NumEvents:      1207  nMaxLevel: 1
+Po:   0.0096,   To (ms):     17.0,  1-Prob_Sigle:  5.4975e-002
+Level0: To(ms):     1754.9 Amp:  0.98 Po: 0.99044754  Po (bino): 0.99044746  NumEvents:      604
+Level1: To(ms):       17.0 Amp: -2.87 Po: 0.00955252  Po (bino): 0.00955252  NumEvents:      603
+
+  5  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442212SC.EVL:
+Total Record Length (s): 124140.7891  NumEvents:      1687  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0207,   To (ms):      3.1,  1-Prob_Sigle:  1.4015e-004
+Level0: To(ms):      144.0 Amp:  0.56 Po: 0.97927674  Po (bino): 0.97927678  NumEvents:      844
+Level1: To(ms):        3.1 Amp: -2.13 Po: 0.02072324  Po (bino): 0.02072324  NumEvents:      843
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442212SC.EVL:
+Total Record Length (s): 124140.9688  NumEvents:       249  nMaxLevel: 1
+Po:   0.0264,   To (ms):     26.4,  1-Prob_Sigle:  1.8812e-001
+Level0: To(ms):      966.9 Amp:  0.56 Po: 0.97358812  Po (bino): 0.97358811  NumEvents:      125
+Level1: To(ms):       26.4 Amp: -2.46 Po: 0.02641190  Po (bino): 0.02641190  NumEvents:      124
+
+  6  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442303s1.evl:
+Total Record Length (s): 828968.3125  NumEvents:    107191  nMaxLevel: 1   nNumChannels:  1
+Po:   0.4097,   To (ms):      6.3,  1-Prob_Sigle:  1.4013e-045
+Level0: To(ms):        9.1 Amp: -0.02 Po: 0.59025956  Po (bino): 0.59025955  NumEvents:    53596
+Level1: To(ms):        6.3 Amp: -2.87 Po: 0.40974044  Po (bino): 0.40974045  NumEvents:    53595
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442303s1.evl:
+Total Record Length (s): 828979.2500  NumEvents:      1937  nMaxLevel: 1
+Po:   0.4641,   To (ms):    397.4,  1-Prob_Sigle:  1.4013e-045
+Level0: To(ms):      458.5 Amp: -0.02 Po: 0.53590504  Po (bino): 0.53590500  NumEvents:      969
+Level1: To(ms):      397.4 Amp: -3.13 Po: 0.46409500  Po (bino): 0.46409500  NumEvents:      968
+
+  7  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442307p1.evl:
+Total Record Length (s): 419980.6250  NumEvents:     10167  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0511,   To (ms):      4.2,  1-Prob_Sigle:  2.6625e-044
+Level0: To(ms):       78.4 Amp:  0.52 Po: 0.94889095  Po (bino): 0.94889092  NumEvents:     5084
+Level1: To(ms):        4.2 Amp: -2.43 Po: 0.05110906  Po (bino): 0.05110906  NumEvents:     5083
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442307p1.evl:
+Total Record Length (s): 419981.2188  NumEvents:      1171  nMaxLevel: 1
+Po:   0.0645,   To (ms):     46.3,  1-Prob_Sigle:  2.4485e-009
+Level0: To(ms):      670.5 Amp:  0.53 Po: 0.93549808  Po (bino): 0.93549812  NumEvents:      586
+Level1: To(ms):       46.3 Amp: -2.34 Po: 0.06450190  Po (bino): 0.06450190  NumEvents:      585
+
+  8  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442419p1.evl:
+Total Record Length (s): 239988.6250  NumEvents:       129  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0003,   To (ms):      1.1,  1-Prob_Sigle:  9.9028e-001
+Level0: To(ms):     3691.0 Amp:  0.01 Po: 0.99969497  Po (bino): 0.99969500  NumEvents:       65
+Level1: To(ms):        1.1 Amp: -2.57 Po: 0.00030501  Po (bino): 0.00030501  NumEvents:       64
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442419p1.evl:
+Total Record Length (s): 239988.6094  NumEvents:       123  nMaxLevel: 1
+Po:   0.0003,   To (ms):      1.2,  1-Prob_Sigle:  9.9056e-001
+Level0: To(ms):     3869.6 Amp:  0.01 Po: 0.99968918  Po (bino): 0.99968916  NumEvents:       62
+Level1: To(ms):        1.2 Amp: -2.52 Po: 0.00031085  Po (bino): 0.00031085  NumEvents:       61
+
+  9  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442426p1.evl:
+Total Record Length (s): 59996.8828  NumEvents:      4037  nMaxLevel: 1   nNumChannels:  1
+Po:   0.2165,   To (ms):      6.4,  1-Prob_Sigle:  5.6052e-045
+Level0: To(ms):       23.3 Amp:  0.07 Po: 0.78347859  Po (bino): 0.78347856  NumEvents:     2019
+Level1: To(ms):        6.4 Amp: -2.01 Po: 0.21652142  Po (bino): 0.21652143  NumEvents:     2018
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442426p1.evl:
+Total Record Length (s): 59997.7852  NumEvents:       175  nMaxLevel: 1
+Po:   0.2515,   To (ms):    173.5,  1-Prob_Sigle:  1.3538e-006
+Level0: To(ms):      510.3 Amp:  0.08 Po: 0.74847066  Po (bino): 0.74847066  NumEvents:       88
+Level1: To(ms):      173.5 Amp: -2.06 Po: 0.25152932  Po (bino): 0.25152931  NumEvents:       87
+
+ 10  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442430p1.evl:
+Total Record Length (s): 44997.9727  NumEvents:      1701  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0811,   To (ms):      4.3,  1-Prob_Sigle:  1.1374e-016
+Level0: To(ms):       48.6 Amp: -0.04 Po: 0.91888523  Po (bino): 0.91888517  NumEvents:      851
+Level1: To(ms):        4.3 Amp: -3.27 Po: 0.08111480  Po (bino): 0.08111481  NumEvents:      850
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442430p1.evl:
+Total Record Length (s): 44998.0000  NumEvents:        77  nMaxLevel: 1
+Po:   0.1014,   To (ms):    120.1,  1-Prob_Sigle:  1.2410e-001
+Level0: To(ms):     1036.7 Amp: -0.04 Po: 0.89855547  Po (bino): 0.89855552  NumEvents:       39
+Level1: To(ms):      120.1 Amp: -3.24 Po: 0.10144450  Po (bino): 0.10144451  NumEvents:       38
+
+ 11  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442432p1.evl:
+Total Record Length (s): 399982.5625  NumEvents:     16339  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0984,   To (ms):      4.8,  1-Prob_Sigle:  1.2612e-044
+Level0: To(ms):       44.1 Amp: -0.01 Po: 0.90157282  Po (bino): 0.90157282  NumEvents:     8170
+Level1: To(ms):        4.8 Amp: -3.65 Po: 0.09842715  Po (bino): 0.09842715  NumEvents:     8169
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442432p1.evl:
+Total Record Length (s): 399984.5313  NumEvents:       753  nMaxLevel: 1
+Po:   0.1179,   To (ms):    125.5,  1-Prob_Sigle:  2.7015e-011
+Level0: To(ms):      935.8 Amp: -0.01 Po: 0.88205192  Po (bino): 0.88205194  NumEvents:      377
+Level1: To(ms):      125.5 Amp: -3.70 Po: 0.11794805  Po (bino): 0.11794805  NumEvents:      376
+
+ 12  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472104PB.EVL:
+Total Record Length (s): 642967.8750  NumEvents:      1725  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0011,   To (ms):      0.8,  1-Prob_Sigle:  6.3387e-001
+Level0: To(ms):      744.3 Amp:  0.46 Po: 0.99894299  Po (bino): 0.99894303  NumEvents:      863
+Level1: To(ms):        0.8 Amp: -3.15 Po: 0.00105698  Po (bino): 0.00105698  NumEvents:      862
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472104PB.EVL:
+Total Record Length (s): 642968.5625  NumEvents:       937  nMaxLevel: 1
+Po:   0.0028,   To (ms):      3.8,  1-Prob_Sigle:  5.2063e-001
+Level0: To(ms):     1367.1 Amp:  0.46 Po: 0.99721633  Po (bino): 0.99721634  NumEvents:      469
+Level1: To(ms):        3.8 Amp: -3.05 Po: 0.00278365  Po (bino): 0.00278365  NumEvents:      468
+
+ 13  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472207SC.EVL:
+Total Record Length (s): 475914.6563  NumEvents:     24109  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0323,   To (ms):      1.3,  1-Prob_Sigle:  4.2039e-044
+Level0: To(ms):       38.2 Amp:  0.47 Po: 0.96766864  Po (bino): 0.96766865  NumEvents:    12055
+Level1: To(ms):        1.3 Amp: -3.51 Po: 0.03233134  Po (bino): 0.03233134  NumEvents:    12054
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472207SC.EVL:
+Total Record Length (s): 475918.2813  NumEvents:      1641  nMaxLevel: 1
+Po:   0.0640,   To (ms):     37.2,  1-Prob_Sigle:  1.0484e-012
+Level0: To(ms):      542.6 Amp:  0.50 Po: 0.93596005  Po (bino): 0.93596005  NumEvents:      821
+Level1: To(ms):       37.2 Amp: -3.53 Po: 0.06403997  Po (bino): 0.06403997  NumEvents:      820
+
+ 14  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472212BA.EVL:
+Total Record Length (s): 759160.8125  NumEvents:      3903  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0024,   To (ms):      0.9,  1-Prob_Sigle:  9.9871e-002
+Level0: To(ms):      388.0 Amp:  0.61 Po: 0.99764238  Po (bino): 0.99764240  NumEvents:     1952
+Level1: To(ms):        0.9 Amp: -3.54 Po: 0.00235760  Po (bino): 0.00235760  NumEvents:     1951
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472212BA.EVL:
+Total Record Length (s): 759162.4375  NumEvents:      1675  nMaxLevel: 1
+Po:   0.0065,   To (ms):      5.9,  1-Prob_Sigle:  6.5932e-002
+Level0: To(ms):      900.1 Amp:  0.61 Po: 0.99353416  Po (bino): 0.99353421  NumEvents:      838
+Level1: To(ms):        5.9 Amp: -3.31 Po: 0.00646581  Po (bino): 0.00646581  NumEvents:      837
+
+ 15  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472222PC.EVL:
+Total Record Length (s): 443128.1250  NumEvents:     40915  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0400,   To (ms):      0.9,  1-Prob_Sigle:  3.3631e-044
+Level0: To(ms):       20.8 Amp:  1.08 Po: 0.95997398  Po (bino): 0.95997393  NumEvents:    20458
+Level1: To(ms):        0.9 Amp: -3.21 Po: 0.04002604  Po (bino): 0.04002604  NumEvents:    20457
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472222PC.EVL:
+Total Record Length (s): 443133.8750  NumEvents:      8373  nMaxLevel: 1
+Po:   0.1365,   To (ms):     14.4,  1-Prob_Sigle:  8.4078e-045
+Level0: To(ms):       91.4 Amp:  1.15 Po: 0.86354364  Po (bino): 0.86354363  NumEvents:     4187
+Level1: To(ms):       14.4 Amp: -3.18 Po: 0.13645639  Po (bino): 0.13645639  NumEvents:     4186
+
+ 16  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472225PC.EVL:
+Total Record Length (s): 731764.1875  NumEvents:      6863  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0035,   To (ms):      0.7,  1-Prob_Sigle:  2.5196e-003
+Level0: To(ms):      212.5 Amp:  1.08 Po: 0.99652108  Po (bino): 0.99652106  NumEvents:     3432
+Level1: To(ms):        0.7 Amp: -3.76 Po: 0.00347896  Po (bino): 0.00347896  NumEvents:     3431
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472225PC.EVL:
+Total Record Length (s): 731763.8125  NumEvents:      3343  nMaxLevel: 1
+Po:   0.0108,   To (ms):      4.7,  1-Prob_Sigle:  1.1024e-004
+Level0: To(ms):      432.9 Amp:  1.08 Po: 0.98918145  Po (bino): 0.98918146  NumEvents:     1672
+Level1: To(ms):        4.7 Amp: -3.56 Po: 0.01081852  Po (bino): 0.01081852  NumEvents:     1671
+
+ 17  C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472307PC.EVL:
+Total Record Length (s): 100915.0391  NumEvents:     12153  nMaxLevel: 1   nNumChannels:  1
+Po:   0.0818,   To (ms):      1.4,  1-Prob_Sigle:  1.5414e-044
+Level0: To(ms):       15.2 Amp:  0.95 Po: 0.91816623  Po (bino): 0.91816622  NumEvents:     6077
+Level1: To(ms):        1.4 Amp: -3.34 Po: 0.08183377  Po (bino): 0.08183376  NumEvents:     6076
+
+C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472307PC.EVL:
+Total Record Length (s): 100915.8047  NumEvents:       455  nMaxLevel: 1
+Po:   0.1539,   To (ms):     68.4,  1-Prob_Sigle:  2.6367e-009
+Level0: To(ms):      374.5 Amp:  1.08 Po: 0.84613907  Po (bino): 0.84613907  NumEvents:      228
+Level1: To(ms):       68.4 Amp: -2.99 Po: 0.15386092  Po (bino): 0.15386093  NumEvents:      227
+
+
+Po:               0.061 +-      0.02406 (n= 18),     To (ms):         2.558 +-        0.448 (n= 18)
+Tc (ms):        409.077 +-      205.394 (n= 18),     Amp:            -2.900 +-        0.165 (n= 18)
+Tcib (ms):        1.268 +-        0.121 (n= 18),     Tc:            409.077 +-      205.394 (n= 18)
+BPo:              0.086 +-      0.02745 (n= 18),     BPoib:           0.613 +-      0.05349 (n= 18),
+BTo (ms):        61.207 +-       22.961 (n= 18),     BTc (ms):     1010.629 +-      211.166 (n= 18)
+fCutoff:     15.0
+
+
+   i      Po       To           Tc     BPo          BTo          BTc    Poib         Tcib      Amp      Length  NumChann    FileName
+   1  0.0053     2.83       532.08  0.0073        12.16      1655.50  0.7258         1.07   -1.511    255152.8         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442200PB.EVL
+   2  0.0012     0.99       808.22  0.0035         6.34      1805.80  0.3509         1.84   -2.392   1067354.1         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442202SC.EVL
+   3  0.0315     1.47        45.24  0.0791        23.45       273.21  0.3991         2.22   -2.220   1229951.9         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442203SB.EVL
+   4  0.0217     2.02        91.09  0.0402        17.89       427.08  0.5402         1.72   -4.027    359982.2         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442207a1.evl
+   5  0.0066     2.46       370.16  0.0096        16.95      1757.79  0.6915         1.10   -2.610   1070166.4         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442209SC.EVL
+   6  0.0207     3.05       144.21  0.0264        26.44       974.69  0.7846         0.84   -2.128    124140.8         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442212SC.EVL
+   7  0.4097     6.34         9.13  0.4641       397.44       458.94  0.8829         0.84   -2.870    828968.3         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442303s1.evl
+   8  0.0511     4.22        78.40  0.0645        46.31       671.61  0.7924         1.11   -2.431    419980.6         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442307p1.evl
+   9  0.0003     1.14      3748.68  0.0003         1.22      3933.02  0.9812         0.02   -2.573    239988.6         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442419p1.evl
+  10  0.2165     6.44        23.29  0.2515       173.46       516.17  0.8608         1.04   -2.006     59996.9         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442426p1.evl
+  11  0.0811     4.29        48.64  0.1014       120.13      1064.03  0.7996         1.08   -3.268     44998.0         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442430p1.evl
+  12  0.0984     4.82        44.14  0.1179       125.47       938.32  0.8345         0.96   -3.645    399982.6         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\442432p1.evl
+  13  0.0011     0.79       745.11  0.0028         3.82      1370.04  0.3797         1.29   -3.152    642967.9         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472104PB.EVL
+  14  0.0323     1.28        38.21  0.0640        37.17       543.22  0.5049         1.25   -3.514    475914.7         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472207SC.EVL
+  15  0.0024     0.92       388.20  0.0065         5.86       901.14  0.3646         1.60   -3.537    759160.8         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472212BA.EVL
+  16  0.0400     0.87        20.79  0.1365        14.45        91.42  0.2933         2.09   -3.213    443128.1         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472222PC.EVL
+  17  0.0035     0.74       212.54  0.0108         4.74       433.18  0.3216         1.57   -3.762    731764.2         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472225PC.EVL
+  18  0.0818     1.36        15.25  0.1539        68.40       376.16  0.5319         1.20   -3.340    100915.0         1    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\472307PC.EVL
+
+
+     PofMean         PoSem       ToMean         ToSem       TcMean         TcSem      AmpMean        AmpSem     TcibMean       TcibSem       BPoMean        BPoSem     PoibMean       PoibSem      BToMean        BToSem      BTcMean        BTcSem  N    fCutoff    Name
+       0.061       0.02406        2.558         0.448      409.077       205.394       -2.900         0.165        1.268         0.121         0.086       0.02745        0.613       0.05349       61.207        22.961     1010.629       211.166 18       15.0    C:\EPData\G4ST\G4S143T\EDTA\co-bg\CA_Total\S-C\G4ST_COBG_CA_SC_sum1.sum 
